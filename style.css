@@ -1,0 +1,25 @@
+body{
+    background-color:rgb(217, 216, 230);
+    font-family:'Courier New', Courier, monospace;
+}
+
+#main{
+    display:flex;
+    flex-direction: column;
+}
+
+#header{
+    font-size: 50px;
+    font-weight:lighter;
+    padding: 20px;
+}
+
+#input{
+    width: 25%;
+}
+
+
+#book_tab{
+    display: flex;
+    flex-direction: row;
+}
