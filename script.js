@@ -17,11 +17,15 @@ book.prototype.describe = function() {
 }
 
 
-function addBookToLibrary(title, author, num_page, readed){
-    let value = document.getElementById("id");
+function addBookToLibrary(){
+    let value = [document.getElementById("title").value,
+                 document.getElementById("author").value,
+                 document.getElementById("page").value,
+                 document.getElementById("readed").value];
     console.log(value);
-    let newBook = new book(title, author, num_page, readed);
 
+    
+    let newBook = new book(value[0], value[1], value[2], value[3]);
     myLibrary.push(newBook);
     showBook();
 }
@@ -32,17 +36,18 @@ function showBook(){
     div.innerHTML= "";
 
     myLibrary.forEach((_book) => {
-        let newDiv = document.createElement("div");  
-        newDiv.id = "book_tab"; 
+        let newList = document.createElement("li");  
+        newList.draggable = true;
+        newList.id = "book_tab"; 
         
         /* element creation*/
         _book.describe().forEach((content) =>{
             let element = document.createElement("p");
             element.innerHTML = content;
-            newDiv.appendChild(element);
+            newList.appendChild(element);
         })
 
-        div.append(newDiv);
+        div.append(newList);
     })
 }
 

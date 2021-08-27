@@ -5,41 +5,38 @@
     </head>
 
     <body> 
-        <div id="main"> 
-            <div id="header"> 
+        <div class="main"> 
+            <div class="header"> 
                 <h>Library</h>
-
-            <div id="form"> 
-                <ul>
-                    <li>
-                        <label for="title">Title</label>
-                        <input type="text" id="title" name="input_title">
-                    </li>
-                    <li>
-                        <label for="author">Author</label>
-                        <input type="text" id ="author" name="input_user">
-                    </li>
-                    <li>
-                        <label for="page">Number of pages</label>
-                        <input type="number" id="page" name="input_page">
-                    </li>
-                    <li>
-                        <label for="readed">Have you read this book?</label>
-                        <input type="checkbox" id="readed" name="input_readed">
-                    </li>
-                    <li class="button">
-                        <button type="submit">Add book</button>
-                    </li>
-                </ul>
             </div>
-        </div>
 
-            <div id="book_display"> 
-                <h1> hello</h1>
+            <div class="book">
+                <div id="book_display"> 
+                </div>
+
+                <div class="form"> 
+              
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="input_title">
+            
+                            <label for="author">Author</label>
+                            <input type="text" id ="author" name="input_user">
+                   
+                            <label for="page">Number of pages</label>
+                            <input type="number" id="page" name="input_page">
+                      
+                            <label for="readed">Have you read this book?</label>
+                            <input type="checkbox" id="readed" name="input_readed">
+
+                            <button class="button" onclick="addBookToLibrary()">Add book</button>
+           
+                    </ul>
+                </div>
             </div>
 
         </div>
     </body>
 
     <script src="script.js"></script>
+    <script src="draggable_list.js"></script>
 </html>
