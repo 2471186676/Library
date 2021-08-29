@@ -7,15 +7,18 @@
     <body> 
         <div class="main"> 
             <div class="header"> 
-                <h>Library</h>
+                <h>&#128218 Library</h>
             </div>
 
             <div class="book">
-                <div id="book_display"> 
+                <div id="book_display" style="overflow-y: auto;"> 
+                    <table id="book_table">
+                    </table>
                 </div>
 
                 <div class="form"> 
-              
+                            <h>Enter book info here</h> <br><br>
+
                             <label for="title">Title</label>
                             <input type="text" id="title" name="input_title">
             
@@ -38,5 +41,4 @@
     </body>
 
     <script src="script.js"></script>
-    <script src="draggable_list.js"></script>
 </html>
