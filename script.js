@@ -74,7 +74,6 @@ function showBook(){
     myLibrary.forEach((_book) => {
         let newList = document.createElement("tr"), content, button;  
         newList.id = "book_tab";
-        newList.className = id; 
         
         /* element creation*/
         _book.describe().forEach((item) =>{
@@ -115,8 +114,11 @@ function showBook(){
 
         button = document.createElement("button");
         button.innerHTML = "Remove";
+        button.className = id;
         button.onclick = function() {
+            console.log(this.className);
             myLibrary.splice(this.className, 1);
+            showBook();
         }
         content.appendChild(button);
         newList.appendChild(content);
